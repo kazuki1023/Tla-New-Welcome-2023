@@ -8,7 +8,7 @@ export default function Home() {
 /*===========================================================*/
 /* 機能編 5-1-1 ドロップダウンメニュー（上）*/
 /*===========================================================*/
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js" strategy='beforeInteractive'></script>
 //ドロップダウンの設定を関数でまとめる
 function mediaQueriesWin(){
 	var width = $(window).width();
@@ -175,16 +175,21 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 
 //Vegas全体の設定
 //  vegasを導入
-$('#slider').vegas({
-		overlay: false,//画像の上に網線やドットのオーバーレイパターン画像を指定。
-		transition: 'fade2',//切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
-		transitionDuration: 1500,//切り替わりのアニメーション時間をミリ秒単位で設定
-		delay: 2500,//スライド間の遅延をミリ秒単位で。
-		animationDuration: 1000,//スライドアニメーション時間をミリ秒単位で設定
-		animation: 'random',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
-		slides: responsiveImage,//画像設定を読む
-        timer:false,//プログレスバー非表示
-	});
+
+console.log($('.slider')[0])
+console.log($('.slider')[0].vegas);
+// $('.slider')[0].vegas({
+// 		overlay: false,//画像の上に網線やドットのオーバーレイパターン画像を指定。
+// 		transition: 'fade2',//切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
+// 		transitionDuration: 1500,//切り替わりのアニメーション時間をミリ秒単位で設定
+// 		delay: 2500,//スライド間の遅延をミリ秒単位で。
+// 		animationDuration: 1000,//スライドアニメーション時間をミリ秒単位で設定
+// 		animation: 'random',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
+// 		slides: responsiveImage,//画像設定を読む
+//         timer:false,//プログレスバー非表示
+// 	});
+
+
 
 /*===========================================================*/
 /* 機能編 7-2-2 虫眼鏡マークをクリックすると全画面表示で検索窓が出現 */
@@ -441,7 +446,7 @@ $(window).on('load',function(){
   <section id="vidual-area">
     <div id="slider-area" className="bgextend bgRLextendTrigger">
       <div className="bgappearTrigger">
-        <div id="slider" />
+        <div id="slider" className='slider'/>
       </div>
       {/*/slider-area*/}
     </div>
@@ -656,90 +661,90 @@ $(window).on('load',function(){
     <ul id="gallery" className="gallery">
       <li className="bgextend bgLRextendTrigger zoomInRotate">
         <div className="bgappearTrigger">
-          <a
+          {/* <a
             href="./img/plan/IMG_0691.jpg"
             data-lightbox="gallery-group"
             data-title="2022.11. 球技大会開幕！！！"
-          >
+          > */}
             <img src="./img/plan/IMG_0691.jpg" alt="" />
-          </a>
+          {/* </a> */}
         </div>
       </li>
       <li className="bgextend bgLRextendTrigger zoomInRotate">
         <div className="bgappearTrigger">
-          <a
+          {/* <a
             href="./img/plan/firstgradeCompa.jpg"
             data-lightbox="gallery-group"
             data-title="2022.06 １年生コンパ"
-          >
+          > */}
             <img src="./img/plan/firstgradeCompa.jpg" alt="" />
-          </a>
+          {/* </a> */}
         </div>
       </li>
       <li className="bgextend bgLRextendTrigger zoomInRotate">
         <div className="bgappearTrigger">
-          <a
+          {/* <a
             href="./img/plan/IMG_2306.jpg"
             data-lightbox="gallery-group"
             data-title="2022.09? 女子会？？？"
-          >
+          > */}
             <img src="./img/plan/IMG_2306.jpg" alt="" />
-          </a>
+          {/* </a> */}
         </div>
       </li>
       <li className="bgextend bgLRextendTrigger zoomInRotate">
         <div className="bgappearTrigger">
-          <a
+          {/* <a
             href="./img/plan/IMG_1728.jpg"
             data-lightbox="gallery-group"
             data-title="2022.07 最修練アフター!!!"
-          >
+          > */}
             <img src="./img/plan/IMG_1728.jpg" alt="" />
-          </a>
+          {/* </a> */}
         </div>
       </li>
       <li className="bgextend bgLRextendTrigger zoomInRotate">
         <div className="bgappearTrigger">
-          <a
+          {/* <a
             href="./img/plan/IMG_4135 .JPG"
             data-lightbox="gallery-group"
             data-title="2022.05 練習終わり！"
-          >
+          > */}
             <img src="./img/plan/IMG_4135 .JPG" alt="" />
-          </a>
+          {/* </a> */}
         </div>
       </li>
       <li className="bgextend bgLRextendTrigger zoomInRotate">
         <div className="bgappearTrigger">
-          <a
+          {/* <a
             href="./img/plan/IMG_2547.jpg"
             data-lightbox="gallery-group"
             data-title="2022.8 鎌倉企画"
-          >
+          > */}
             <img src="./img/plan/IMG_2547.jpg" alt="" />
-          </a>
+          {/* </a> */}
         </div>
       </li>
       <li className="bgextend bgLRextendTrigger zoomInRotate">
         <div className="bgappearTrigger">
-          <a
+          {/* <a
             href="./img/summercamp/IMG_2097.jpg"
             data-lightbox="gallery-group"
             data-title="2022.08 夏合宿、サークル対抗！"
-          >
+          > */}
             <img src="./img/summercamp/IMG_2097.jpg" alt="" />
-          </a>
+          {/* </a> */}
         </div>
       </li>
       <li className="bgextend bgLRextendTrigger zoomInRotate">
         <div className="bgappearTrigger">
-          <a
+          {/* <a
             href="./img/summercamp/IMG_3092.jpg"
             data-lightbox="gallery-group"
             data-title="メンバー合宿"
-          >
+          > */}
             <img src="./img/summercamp/IMG_3092.jpg" alt="" />
-          </a>
+          {/* </a> */}
         </div>
       </li>
     </ul>
@@ -823,7 +828,7 @@ $(window).on('load',function(){
   {/*機能編 6-2-1 複数の画像を一覧で見せる*/}
   {/*印象編 8-6 アルファベットがランダムに変化して出現*/}
   {/*自作のJS*/}
-    <Script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></Script>
+    <Script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js" strategy='beforeInteractive'></Script>
     <Script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></Script>
     <Script src="https://cdn.jsdelivr.net/npm/shuffle-text@0.3.0/build/shuffle-text.min.js"></Script>
 </>

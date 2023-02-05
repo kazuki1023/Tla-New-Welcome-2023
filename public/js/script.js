@@ -169,7 +169,7 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 
 //Vegas全体の設定
 
-$('#slider').vegas({
+$('.slider').vegas({
 		overlay: false,//画像の上に網線やドットのオーバーレイパターン画像を指定。
 		transition: 'fade2',//切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
 		transitionDuration: 1500,//切り替わりのアニメーション時間をミリ秒単位で設定
