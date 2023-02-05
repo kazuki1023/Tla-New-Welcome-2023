@@ -316,7 +316,7 @@ $(window).on('load',function(){
     /*機能編 5-4-1タブメニューの読み込み*/
     var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
 	GethashID (hashName);//設定したタブの読み込み
-  
+
 	});
     //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
 
@@ -326,13 +326,13 @@ $(window).on('load',function(){
 
     //=====ここから背景が伸びた後に動かしたいJSをまとめる
     $('.splashbg').on('animationend', function() {
-        
+
     /* 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ*/
-    fadeAnime();        
-    // 印象編 8-6 アルファベットがランダムに変化して出現 
+    fadeAnime();
+    // 印象編 8-6 アルファベットがランダムに変化して出現
 	$(".endAnime").removeClass("endAnime");
 	TypingInit(); //印象編 8-6 アルファベットがランダムに変化して出現 初期設定
-	TypingAnime();//印象編 8-6 アルファベットがランダムに変化して出現  
+	TypingAnime();//印象編 8-6 アルファベットがランダムに変化して出現
 
     });
     //=====ここまで背景が伸びた後に動かしたいJSをまとめる
