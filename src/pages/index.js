@@ -175,30 +175,30 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 
 //Vegas全体の設定
 
-$('#slider').vegas({
-		overlay: false,//画像の上に網線やドットのオーバーレイパターン画像を指定。
-		transition: 'fade2',//切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
-		transitionDuration: 1500,//切り替わりのアニメーション時間をミリ秒単位で設定
-		delay: 2500,//スライド間の遅延をミリ秒単位で。
-		animationDuration: 1000,//スライドアニメーション時間をミリ秒単位で設定
-		animation: 'random',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
-		slides: responsiveImage,//画像設定を読む
-        timer:false,//プログレスバー非表示
-	});
+// $('#slider').vegas({
+// 		overlay: false,//画像の上に網線やドットのオーバーレイパターン画像を指定。
+// 		transition: 'fade2',//切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
+// 		transitionDuration: 1500,//切り替わりのアニメーション時間をミリ秒単位で設定
+// 		delay: 2500,//スライド間の遅延をミリ秒単位で。
+// 		animationDuration: 1000,//スライドアニメーション時間をミリ秒単位で設定
+// 		animation: 'random',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
+// 		slides: responsiveImage,//画像設定を読む
+//         timer:false,//プログレスバー非表示
+// 	});
 
 /*===========================================================*/
 /* 機能編 7-2-2 虫眼鏡マークをクリックすると全画面表示で検索窓が出現 */
 /*===========================================================*/
 
 //開くボタンを押した時には
-$(".open-btn").click(function () {
-    $("#search-wrap").addClass('panelactive');//#search-wrapへpanelactiveクラスを付与
-	$('#search-text').focus();//テキスト入力のinputにフォーカス
+$(".open-btn").on("click", function () {
+    $(".search-wrap").addClass('panelactive');//#search-wrapへpanelactiveクラスを付与
+	$('.search-text').focus();//テキスト入力のinputにフォーカス
 });
 
 //閉じるボタンを押した時には
 $(".close-btn").click(function () {
-    $("#search-wrap").removeClass('panelactive');//#search-wrapからpanelactiveクラスを除去
+    $(".search-wrap").removeClass('panelactive');//#search-wrapからpanelactiveクラスを除去
 });
 
 /*===========================================================*/
@@ -417,7 +417,7 @@ $(window).on('load',function(){
     </nav>
     <div className="open-btn" />
   </header>
-  <div id="search-wrap">
+  <div className="search-wrap" id="search-wrap">
     <div className="close-btn">
       <span />
       <span />
@@ -429,6 +429,7 @@ $(window).on('load',function(){
           defaultValue=""
           name=""
           id="search-text"
+          className="search-text"
           placeholder="search"
         />
         <input type="submit" id="searchsubmit" defaultValue="" />
@@ -822,7 +823,6 @@ $(window).on('load',function(){
   {/*機能編 6-2-1 複数の画像を一覧で見せる*/}
   {/*印象編 8-6 アルファベットがランダムに変化して出現*/}
   {/*自作のJS*/}
-  <Script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></Script>
     <Script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></Script>
     <Script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></Script>
     <Script src="https://cdn.jsdelivr.net/npm/shuffle-text@0.3.0/build/shuffle-text.min.js"></Script>
