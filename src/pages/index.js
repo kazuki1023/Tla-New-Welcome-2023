@@ -72,11 +72,11 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 function setFadeElement(){
 	var windowH = $(window).height();	//ウィンドウの高さを取得
 	var scroll = $(window).scrollTop(); //スクロール値を取得
-    
+
     //出現範囲の指定
 	var contentsTop = Math.round($('#contact').offset().top);	//要素までの高さ四捨五入した値を取得
 	var contentsH = $('#contact').outerHeight(true);	//要素の高さを取得
-    
+
     //2つ目の出現範囲の指定※任意
 	var contentsTop2 = Math.round($('#footer').offset().top);	//要素までの高さ四捨五入した値を取得
 	var contentsH2 = $('#footer').outerHeight(true);//要素の高さを取得
@@ -87,14 +87,14 @@ function setFadeElement(){
 		$("#page-top").removeClass("RightMove");   //RightMoveを削除
 		$(".hide-btn").removeClass("hide-btn");	  //hide-btnを削除
 	}//2つ目の出現範囲に入ったかどうかをチェック※任意
-    else if(scroll+windowH >= contentsTop2 && scroll+windowH <= contentsTop2+contentsH2){       
+    else if(scroll+windowH >= contentsTop2 && scroll+windowH <= contentsTop2+contentsH2){
 		$("#page-top").addClass("LeftMove");    //入っていたらLeftMoveをクラス追加
 		$("#page-top").removeClass("RightMove");   //RightMoveを削除
 	}//それ以外は
     else{
         if(!$(".hide-btn").length){				//サイト表示時にRightMoveクラスを一瞬付与させないためのクラス付け。hide-btnがなければ下記の動作を行う
         $("#page-top").addClass("RightMove");  //RightMoveをクラス追加
-		$("#page-top").removeClass("LeftMove"); //LeftMoveを削除	
+		$("#page-top").removeClass("LeftMove"); //LeftMoveを削除
         }
 	}
 }
@@ -123,7 +123,7 @@ function GethashID (hashIDName){
 				$(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
 				//表示させるエリア設定
 				$(".area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
-				$(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加	
+				$(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加
 			}
 		});
 	}
@@ -131,7 +131,7 @@ function GethashID (hashIDName){
 
 //タブをクリックしたら
 $('.tab a').on('click', function() {
-	var idName = $(this).attr('href'); //タブ内のリンク名を取得	
+	var idName = $(this).attr('href'); //タブ内のリンク名を取得
 	GethashID (idName);//設定したタブの読み込みと
 	return false;//aタグを無効にする
 });
@@ -218,7 +218,7 @@ function fadeAnime(){
 		}else{
 			$(this).removeClass('bgappear');// 画面外に出たらbgappearというクラス名を外す
 		}
-	});	
+	});
     //印象編 4-9 背景色が伸びて出現（左から）
 	$('.bgLRextendTrigger').each(function(){ //bgLRextendTriggerというクラス名が
 		var elemPos = $(this).offset().top-50;//要素より、50px上の
@@ -251,7 +251,7 @@ function fadeAnime(){
 		}else{
 			$(this).removeClass('startwd');// 画面外に出たらstartwdというクラス名を外す
 		}
-	});  
+	});
 }
 
 /*===========================================================*/
@@ -315,8 +315,8 @@ $(window).on('load',function(){
 
     /*機能編 5-4-1タブメニューの読み込み*/
     var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
-	GethashID (hashName);//設定したタブの読み込み   
-        
+	GethashID (hashName);//設定したタブの読み込み
+  
 	});
     //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
 
