@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 import $ from "jquery"
 import { useEffect } from 'react'
+import vegas from './vegas'
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
 /* 機能編 5-1-1 ドロップダウンメニュー（上）*/
 /*===========================================================*/
 //ドロップダウンの設定を関数でまとめる
-function mediaQueriesWin(){
+  function mediaQueriesWin(){
 	var width = $(window).width();
 	if(width <= 960) {//横幅が960px以下の場合
 		$(".has-child>a").off('click');	//has-childクラスがついたaタグのonイベントを複数登録を避ける為offにして一旦初期状態へ
@@ -184,16 +185,19 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 console.log($('.slider')[0]);
 
 <BuildTimeStars/>
-// $('.slider')[0].vegas({
-// 		overlay: false,//画像の上に網線やドットのオーバーレイパターン画像を指定。
-// 		transition: 'fade2',//切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
-// 		transitionDuration: 1500,//切り替わりのアニメーション時間をミリ秒単位で設定
-// 		delay: 2500,//スライド間の遅延をミリ秒単位で。
-// 		animationDuration: 1000,//スライドアニメーション時間をミリ秒単位で設定
-// 		animation: 'random',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
-// 		slides: responsiveImage,//画像設定を読む
-//         timer:false,//プログレスバー非表示
-// 	});
+function vegas() {
+  $('.slider')[0].vegas({
+		overlay: false,//画像の上に網線やドットのオーバーレイパターン画像を指定。
+		transition: 'fade2',//切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
+		transitionDuration: 1500,//切り替わりのアニメーション時間をミリ秒単位で設定
+		delay: 2500,//スライド間の遅延をミリ秒単位で。
+		animationDuration: 1000,//スライドアニメーション時間をミリ秒単位で設定
+		animation: 'random',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
+		slides: responsiveImage,//画像設定を読む
+        timer:false,//プログレスバー非表示
+	});
+}
+
 console.log($('.slider')[0].vegas);
 
 
