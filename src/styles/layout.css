@@ -361,7 +361,7 @@ body.appear #vidual-area::after{
 }
 #service .service-img-propotion{
     height: 60vh;
-    background:url("") no-repeat center;
+    background:url("http://localhost:3000/img/practice/LINE_ALBUM_230103_12.jpg") no-repeat center;
     background-size: contain;
 }
 #service .service-img-appeal{
