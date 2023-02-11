@@ -1,4 +1,19 @@
+## 今でてるエラー
 
+localhost:3000にアクセスすると
+Server Error
+TypeError: Cannot read properties of undefined (reading 'startsWith')
+というエラーが出てくる
+
+## 試したこと、考えうる原因
+- 文法ミス
+  - gitlensで過去の差分と確認したけど、エラー解消されない
+
+- npm installで変なものinstalした
+  - npm uninstall exportしたけど、エラー解消されない
+
+- npm run build npm run exportをしたから
+  - これを解除?uninstall?するやり方が分からなかった
 
 
 
