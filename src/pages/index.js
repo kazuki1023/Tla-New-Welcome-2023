@@ -229,7 +229,7 @@ function fadeAnime(){
 		}else{
 			$(this).removeClass('bgLRextend');// 画面外に出たらbgLRextendというクラス名を外す
 		}
-	});	
+	});
     //印象編 4-9 背景色が伸びて出現（右から）
     $('.bgRLextendTrigger').each(function(){ //bgRLextendTriggerというクラス名が
 		var elemPos = $(this).offset().top-50;//要素より、50px上の
